@@ -75,5 +75,26 @@ public class ProdutoRepository {
         return true;
    
     }
+        
+         public boolean update(Produto produto) {
+        conexao = Conexao.conector();
+        String sql = "UPDATE tb_produto SET nome = ?, descricao = ?, preco = ?, qtd = ? WHERE id = ?";
+        try {
+            pst = conexao.prepareStatement(sql);
+            pst.setString(1, produto.getNome());
+            pst.setString(2, produto.getDescricao());
+            pst.setDouble(3, produto.getPreco());
+            pst.setInt(4, produto.getQtd());
+            pst.setLong(5, produto.getId());
+            
+            int i = pst.executeUpdate();
+            if(i > 0){
+                return true;
+            }
+            conexao.close();
+        } catch (Exception e) {
+        }
+        return false;
+    }
     
 }
