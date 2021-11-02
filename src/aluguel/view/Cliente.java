@@ -18,6 +18,8 @@ public class Cliente extends javax.swing.JInternalFrame {
     public Cliente() {
         initComponents();
         pesquisarCliente();
+        btnExcluir.setEnabled(false);
+        btnEditar.setEnabled(false);
         
     }
     
@@ -40,6 +42,8 @@ public class Cliente extends javax.swing.JInternalFrame {
         txtName.setText(null);
         txtEndereco.setText(null);
         txtTelefone.setText(null);
+        btnExcluir.setEnabled(false);
+        btnEditar.setEnabled(false);
         
     }
 
@@ -359,6 +363,8 @@ public class Cliente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         pegarLinhaSelecionada();
         btnNovo.setEnabled(false);
+        btnExcluir.setEnabled(true);
+        btnEditar.setEnabled(true);
     }//GEN-LAST:event_tblClientesMouseClicked
  
     public void pegarLinhaSelecionada(){

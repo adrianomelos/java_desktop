@@ -18,6 +18,8 @@ public class Usuario extends javax.swing.JInternalFrame {
     public Usuario() {
         initComponents();
         pesquisarCliente();
+        btnEditar.setEnabled(false);
+        btnExcluir.setEnabled(false);
         
     }
 
@@ -303,6 +305,8 @@ public class Usuario extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         btnNovo.setEnabled(false);
         pegarLinhaSelecionada();
+        btnEditar.setEnabled(true);
+        btnExcluir.setEnabled(true);
     }//GEN-LAST:event_tbUsuariosMouseClicked
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -310,6 +314,8 @@ public class Usuario extends javax.swing.JInternalFrame {
         limparCampos();
         txtId.setText(null);
         btnNovo.setEnabled(true);
+        btnEditar.setEnabled(false);
+        btnExcluir.setEnabled(false);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtPesquisaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPesquisaKeyReleased
@@ -349,6 +355,8 @@ public class Usuario extends javax.swing.JInternalFrame {
         cbProfile.setSelectedItem(null);
         cbProfile.setSelectedItem(null);
         txtPassword.setText(null);
+        btnEditar.setEnabled(false);
+        btnExcluir.setEnabled(false);
        
     }
     
